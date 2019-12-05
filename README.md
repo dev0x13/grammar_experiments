@@ -1,2 +1,2 @@
 # grammar_experiments
-A temporal repository for experiments on grammar parsers
+A temporary repository for experiments on grammar parsers
