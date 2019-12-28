@@ -1,5 +1,5 @@
 
-// Generated from /home/george/diplom/grammar_exp/key_grammar/antlr4/RepoKey.g4 by ANTLR 4.7.2
+// Generated from /home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoKey.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -22,6 +22,9 @@ public:
   virtual void enterIndex(RepoKeyParser::IndexContext * /*ctx*/) override { }
   virtual void exitIndex(RepoKeyParser::IndexContext * /*ctx*/) override { }
 
+  virtual void enterList_of_parent_indexes(RepoKeyParser::List_of_parent_indexesContext * /*ctx*/) override { }
+  virtual void exitList_of_parent_indexes(RepoKeyParser::List_of_parent_indexesContext * /*ctx*/) override { }
+
   virtual void enterParent_index(RepoKeyParser::Parent_indexContext * /*ctx*/) override { }
   virtual void exitParent_index(RepoKeyParser::Parent_indexContext * /*ctx*/) override { }
 
@@ -36,6 +39,9 @@ public:
 
   virtual void enterRange(RepoKeyParser::RangeContext * /*ctx*/) override { }
   virtual void exitRange(RepoKeyParser::RangeContext * /*ctx*/) override { }
+
+  virtual void enterList(RepoKeyParser::ListContext * /*ctx*/) override { }
+  virtual void exitList(RepoKeyParser::ListContext * /*ctx*/) override { }
 
   virtual void enterReg_exp(RepoKeyParser::Reg_expContext * /*ctx*/) override { }
   virtual void exitReg_exp(RepoKeyParser::Reg_expContext * /*ctx*/) override { }

@@ -1,5 +1,5 @@
 
-// Generated from /home/george/diplom/grammar_exp/key_grammar/antlr4/RepoKey.g4 by ANTLR 4.7.2
+// Generated from /home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoKey.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -13,12 +13,13 @@ class  RepoKeyParser : public antlr4::Parser {
 public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
-    T__7 = 8, T__8 = 9, INTEGER = 10, WS = 11
+    T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, INTEGER = 12, WS = 13
   };
 
   enum {
-    RuleKey = 0, RuleIndex = 1, RuleParent_index = 2, RuleMagic_var = 3, 
-    RuleMul_exp = 4, RuleSum_exp = 5, RuleRange = 6, RuleReg_exp = 7
+    RuleKey = 0, RuleIndex = 1, RuleList_of_parent_indexes = 2, RuleParent_index = 3, 
+    RuleMagic_var = 4, RuleMul_exp = 5, RuleSum_exp = 6, RuleRange = 7, 
+    RuleList = 8, RuleReg_exp = 9
   };
 
   RepoKeyParser(antlr4::TokenStream *input);
@@ -33,11 +34,13 @@ public:
 
   class KeyContext;
   class IndexContext;
+  class List_of_parent_indexesContext;
   class Parent_indexContext;
   class Magic_varContext;
   class Mul_expContext;
   class Sum_expContext;
   class RangeContext;
+  class ListContext;
   class Reg_expContext; 
 
   class  KeyContext : public antlr4::ParserRuleContext {
@@ -45,8 +48,7 @@ public:
     KeyContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     IndexContext *index();
-    std::vector<Parent_indexContext *> parent_index();
-    Parent_indexContext* parent_index(size_t i);
+    List_of_parent_indexesContext *list_of_parent_indexes();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -61,6 +63,7 @@ public:
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *INTEGER();
     RangeContext *range();
+    ListContext *list();
     Mul_expContext *mul_exp();
     Sum_expContext *sum_exp();
     Reg_expContext *reg_exp();
@@ -72,6 +75,20 @@ public:
   };
 
   IndexContext* index();
+
+  class  List_of_parent_indexesContext : public antlr4::ParserRuleContext {
+  public:
+    List_of_parent_indexesContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    std::vector<Parent_indexContext *> parent_index();
+    Parent_indexContext* parent_index(size_t i);
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+   
+  };
+
+  List_of_parent_indexesContext* list_of_parent_indexes();
 
   class  Parent_indexContext : public antlr4::ParserRuleContext {
   public:
@@ -148,6 +165,20 @@ public:
   };
 
   RangeContext* range();
+
+  class  ListContext : public antlr4::ParserRuleContext {
+  public:
+    ListContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    std::vector<antlr4::tree::TerminalNode *> INTEGER();
+    antlr4::tree::TerminalNode* INTEGER(size_t i);
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+   
+  };
+
+  ListContext* list();
 
   class  Reg_expContext : public antlr4::ParserRuleContext {
   public:

@@ -1,5 +1,5 @@
 
-// Generated from /home/george/diplom/grammar_exp/key_grammar/antlr4/RepoKey.g4 by ANTLR 4.7.2
+// Generated from /home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoKey.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -13,7 +13,7 @@ class  RepoKeyLexer : public antlr4::Lexer {
 public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
-    T__7 = 8, T__8 = 9, INTEGER = 10, WS = 11
+    T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, INTEGER = 12, WS = 13
   };
 
   RepoKeyLexer(antlr4::CharStream *input);
