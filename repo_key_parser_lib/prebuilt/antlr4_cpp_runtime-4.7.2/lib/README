@@ -1,0 +1,3 @@
+Built on Ubuntu 16.04 + GCC 5.4 from https://github.com/antlr/antlr4/tree/437c5a7b9afd1ca9ad4f85c899390d566da7c127/runtime/Cpp
+Compiler flags used for x86-gcc5.4: `-fPIC -m32`
+Compiler flags used for x64-gcc5.4: `-fPIC`
