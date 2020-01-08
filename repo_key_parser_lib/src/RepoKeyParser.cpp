@@ -2,7 +2,7 @@
 // Generated from /home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoKey.g4 by ANTLR 4.7.2
 
 
-#include "RepoKeyListener.h"
+#include "RepoKeyVisitor.h"
 
 #include "RepoKeyParser.h"
 
@@ -50,16 +50,12 @@ size_t RepoKeyParser::KeyContext::getRuleIndex() const {
   return RepoKeyParser::RuleKey;
 }
 
-void RepoKeyParser::KeyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKey(this);
-}
 
-void RepoKeyParser::KeyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKey(this);
+antlrcpp::Any RepoKeyParser::KeyContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitKey(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::KeyContext* RepoKeyParser::key() {
@@ -133,16 +129,12 @@ size_t RepoKeyParser::IndexContext::getRuleIndex() const {
   return RepoKeyParser::RuleIndex;
 }
 
-void RepoKeyParser::IndexContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndex(this);
-}
 
-void RepoKeyParser::IndexContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndex(this);
+antlrcpp::Any RepoKeyParser::IndexContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitIndex(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::IndexContext* RepoKeyParser::index() {
@@ -236,16 +228,12 @@ size_t RepoKeyParser::List_of_parent_indexesContext::getRuleIndex() const {
   return RepoKeyParser::RuleList_of_parent_indexes;
 }
 
-void RepoKeyParser::List_of_parent_indexesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList_of_parent_indexes(this);
-}
 
-void RepoKeyParser::List_of_parent_indexesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList_of_parent_indexes(this);
+antlrcpp::Any RepoKeyParser::List_of_parent_indexesContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitList_of_parent_indexes(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::List_of_parent_indexesContext* RepoKeyParser::list_of_parent_indexes() {
@@ -332,16 +320,12 @@ size_t RepoKeyParser::Parent_indexContext::getRuleIndex() const {
   return RepoKeyParser::RuleParent_index;
 }
 
-void RepoKeyParser::Parent_indexContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParent_index(this);
-}
 
-void RepoKeyParser::Parent_indexContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParent_index(this);
+antlrcpp::Any RepoKeyParser::Parent_indexContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitParent_index(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::Parent_indexContext* RepoKeyParser::parent_index() {
@@ -420,16 +404,12 @@ size_t RepoKeyParser::Magic_varContext::getRuleIndex() const {
   return RepoKeyParser::RuleMagic_var;
 }
 
-void RepoKeyParser::Magic_varContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMagic_var(this);
-}
 
-void RepoKeyParser::Magic_varContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMagic_var(this);
+antlrcpp::Any RepoKeyParser::Magic_varContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitMagic_var(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::Magic_varContext* RepoKeyParser::magic_var() {
@@ -481,16 +461,12 @@ size_t RepoKeyParser::Mul_expContext::getRuleIndex() const {
   return RepoKeyParser::RuleMul_exp;
 }
 
-void RepoKeyParser::Mul_expContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMul_exp(this);
-}
 
-void RepoKeyParser::Mul_expContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMul_exp(this);
+antlrcpp::Any RepoKeyParser::Mul_expContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitMul_exp(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::Mul_expContext* RepoKeyParser::mul_exp() {
@@ -590,16 +566,12 @@ size_t RepoKeyParser::Sum_expContext::getRuleIndex() const {
   return RepoKeyParser::RuleSum_exp;
 }
 
-void RepoKeyParser::Sum_expContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSum_exp(this);
-}
 
-void RepoKeyParser::Sum_expContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSum_exp(this);
+antlrcpp::Any RepoKeyParser::Sum_expContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitSum_exp(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::Sum_expContext* RepoKeyParser::sum_exp() {
@@ -675,16 +647,12 @@ size_t RepoKeyParser::RangeContext::getRuleIndex() const {
   return RepoKeyParser::RuleRange;
 }
 
-void RepoKeyParser::RangeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRange(this);
-}
 
-void RepoKeyParser::RangeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRange(this);
+antlrcpp::Any RepoKeyParser::RangeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitRange(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::RangeContext* RepoKeyParser::range() {
@@ -755,16 +723,12 @@ size_t RepoKeyParser::ListContext::getRuleIndex() const {
   return RepoKeyParser::RuleList;
 }
 
-void RepoKeyParser::ListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterList(this);
-}
 
-void RepoKeyParser::ListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitList(this);
+antlrcpp::Any RepoKeyParser::ListContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitList(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::ListContext* RepoKeyParser::list() {
@@ -817,16 +781,12 @@ size_t RepoKeyParser::Reg_expContext::getRuleIndex() const {
   return RepoKeyParser::RuleReg_exp;
 }
 
-void RepoKeyParser::Reg_expContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReg_exp(this);
-}
 
-void RepoKeyParser::Reg_expContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<RepoKeyListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReg_exp(this);
+antlrcpp::Any RepoKeyParser::Reg_expContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = static_cast<RepoKeyVisitor*>(visitor))
+    return parserVisitor->visitReg_exp(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 RepoKeyParser::Reg_expContext* RepoKeyParser::reg_exp() {
