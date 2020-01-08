@@ -40,7 +40,7 @@ mkdir -p $lang_output_dir
 
 rm $lang_output_dir/*
 
-$antlr4_cmd -Dlanguage=$language -o $lang_output_dir $grammar_def
+$antlr4_cmd -Dlanguage=$language -o $lang_output_dir $grammar_def -visitor -no-listener
 
 if [[ "$language" == "Cpp" && "$no_dynamic_casts" == true ]]; then
     echo "[Removing 'dynamic_cast' from parsers code]"
