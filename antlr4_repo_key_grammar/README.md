@@ -1,5 +1,6 @@
 Directory structure:
 
+```
 antlr4_repo_key_grammar
 ├── antlr4_cpp_runtime - runtime for generated C++ parsers
 │   ├── CMakeLists.txt
@@ -28,4 +29,4 @@ antlr4_repo_key_grammar
     └── tests
         ├── test_invalid_repo_keys.sh - tests a set of invalid repo keys
         └── test_valid_repo_keys.sh - tests a set of valid repo keys
-
+```
