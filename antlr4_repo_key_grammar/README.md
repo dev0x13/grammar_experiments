@@ -19,6 +19,7 @@ antlr4_repo_key_grammar
 │   └── Java
 ├── README
 ├── RepoKey.g4 - RepoKey grammar definition (lexer and parser)
+├── RepoQuery.g4 - RepoQuery (RepoKey extended with filters) grammar definition (lexer and parser)
 └── tools - various tools for grammar compiling and testing
     ├── base.sh
     ├── compile_grammar.sh - generates parser code and compiles it (Java/Cpp)

@@ -1,5 +1,5 @@
 
-// Generated from /home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoKey.g4 by ANTLR 4.7.2
+// Generated from /media/george/37882f3f-7578-4629-9e35-0fae5658c718/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoQuery.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -9,15 +9,16 @@
 
 
 
-class  RepoKeyLexer : public antlr4::Lexer {
+class  RepoQueryLexer : public antlr4::Lexer {
 public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
-    T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, INTEGER = 12, WS = 13
+    T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, T__12 = 13, T__13 = 14, 
+    T__14 = 15, INTEGER = 16, WS = 17, FILTER_TOKEN = 18
   };
 
-  RepoKeyLexer(antlr4::CharStream *input);
-  ~RepoKeyLexer();
+  RepoQueryLexer(antlr4::CharStream *input);
+  ~RepoQueryLexer();
 
   virtual std::string getGrammarFileName() const override;
   virtual const std::vector<std::string>& getRuleNames() const override;
