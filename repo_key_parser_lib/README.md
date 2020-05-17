@@ -1,3 +1,5 @@
+THIS IS A LEGACY FOLDER, THIS LIBRARY IS NO LONGER RELEVANT.
+
 Directory structure:
 
 repo_key_parsers
@@ -11,6 +13,7 @@ repo_key_parsers
 └── src - ANTLR4 generated parser sources
 
 CMake options:
+
 * `lib_type` - parser library build type (STATIC or SHARED)
 * `prebuilt_type` - ANTLR4 prebuilt binaries type to use (x64-gcc5.4 or x86-gcc5.4)
 * `antlr4_link_type` - specifies which binaries of ANTLR4 runtime to use (STATIC or SHARED)
