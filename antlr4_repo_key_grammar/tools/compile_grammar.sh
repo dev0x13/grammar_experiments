@@ -29,7 +29,7 @@ script_dir=$(dirname "$0")
 
 source $script_dir/base.sh
 
-grammar_def=$(abs_path $1)
+grammar_def=$(realpath $1)
 lang_output_dir=$output_dir/$language
 
 # 1. Generate lexer and parsers with ANTLR

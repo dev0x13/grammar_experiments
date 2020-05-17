@@ -1,5 +1,5 @@
 
-// Generated from /media/george/37882f3f-7578-4629-9e35-0fae5658c718/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoQuery.g4 by ANTLR 4.7.2
+// Generated from /media/george/HOME/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/grammars/RepoQuery.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -14,13 +14,13 @@ public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
     T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, T__12 = 13, T__13 = 14, 
-    T__14 = 15, INTEGER = 16, WS = 17, FILTER_TOKEN = 18
+    T__14 = 15, T__15 = 16, T__16 = 17, INTEGER = 18, WS = 19, FILTER_WORD = 20
   };
 
   enum {
     RuleQuery = 0, RuleKey = 1, RuleAtom = 2, RuleIndex = 3, RuleList_of_parent_indexes = 4, 
     RuleMagic_var = 5, RuleExpr = 6, RuleRange = 7, RuleList = 8, RuleReg_exp = 9, 
-    RuleFilter = 10
+    RuleFilter_token = 10, RuleFilter = 11
   };
 
   RepoQueryParser(antlr4::TokenStream *input);
@@ -43,6 +43,7 @@ public:
   class RangeContext;
   class ListContext;
   class Reg_expContext;
+  class Filter_tokenContext;
   class FilterContext; 
 
   class  QueryContext : public antlr4::ParserRuleContext {
@@ -197,12 +198,29 @@ public:
 
   Reg_expContext* reg_exp();
 
+  class  Filter_tokenContext : public antlr4::ParserRuleContext {
+  public:
+    antlr4::Token *base = nullptr;;
+    antlr4::Token *from = nullptr;;
+    antlr4::Token *to = nullptr;;
+    Filter_tokenContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    std::vector<antlr4::tree::TerminalNode *> FILTER_WORD();
+    antlr4::tree::TerminalNode* FILTER_WORD(size_t i);
+
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  Filter_tokenContext* filter_token();
+
   class  FilterContext : public antlr4::ParserRuleContext {
   public:
     FilterContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    std::vector<antlr4::tree::TerminalNode *> FILTER_TOKEN();
-    antlr4::tree::TerminalNode* FILTER_TOKEN(size_t i);
+    std::vector<Filter_tokenContext *> filter_token();
+    Filter_tokenContext* filter_token(size_t i);
 
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;

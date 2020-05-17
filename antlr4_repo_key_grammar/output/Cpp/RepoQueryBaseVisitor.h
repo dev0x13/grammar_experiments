@@ -1,5 +1,5 @@
 
-// Generated from /media/george/37882f3f-7578-4629-9e35-0fae5658c718/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoQuery.g4 by ANTLR 4.7.2
+// Generated from /media/george/HOME/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/grammars/RepoQuery.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -52,6 +52,10 @@ public:
   }
 
   virtual antlrcpp::Any visitReg_exp(RepoQueryParser::Reg_expContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitFilter_token(RepoQueryParser::Filter_tokenContext *ctx) override {
     return visitChildren(ctx);
   }
 

@@ -1,7 +1,7 @@
 grammar RepoQuery;
 
 query
-   : key
+   : key EOF
    | key ':' (filter | (filter (',' filter)*)) EOF
    ;
 
@@ -74,21 +74,24 @@ WS
 
 // Filter subgrammar
 
-fragment LETTER
+fragment FILTER_LETTER
    : [a-zA-Z_]
+   | '/'
    ;
 
-fragment FILTER_REINTERPRET_TOKEN
-   : ('(' | ')' | '>' | '/')
+FILTER_WORD
+   : (FILTER_LETTER | INTEGER)+
    ;
 
-FILTER_TOKEN
-   : (LETTER | INTEGER) (LETTER | INTEGER | FILTER_REINTERPRET_TOKEN)*
+filter_token
+   : FILTER_WORD
+   | base=FILTER_WORD ('(' from=FILTER_WORD '>' to=FILTER_WORD ')')
+   | base=FILTER_WORD ('(' '>' to=FILTER_WORD ')')
    ;
 
 filter
-   : FILTER_TOKEN '.' FILTER_TOKEN '.' FILTER_TOKEN '.' FILTER_TOKEN
-   | FILTER_TOKEN '.' FILTER_TOKEN '.' FILTER_TOKEN
-   | FILTER_TOKEN '.' FILTER_TOKEN
-   | FILTER_TOKEN
+   : filter_token '.' filter_token '.' filter_token '.' filter_token
+   | filter_token '.' filter_token '.' filter_token
+   | filter_token '.' filter_token
+   | filter_token
    ;

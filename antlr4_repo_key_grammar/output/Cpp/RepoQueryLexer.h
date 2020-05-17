@@ -1,5 +1,5 @@
 
-// Generated from /media/george/37882f3f-7578-4629-9e35-0fae5658c718/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/RepoQuery.g4 by ANTLR 4.7.2
+// Generated from /media/george/HOME/home/george/diplom/grammar_experiments/antlr4_repo_key_grammar/grammars/RepoQuery.g4 by ANTLR 4.7.2
 
 #pragma once
 
@@ -14,7 +14,7 @@ public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
     T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, T__12 = 13, T__13 = 14, 
-    T__14 = 15, INTEGER = 16, WS = 17, FILTER_TOKEN = 18
+    T__14 = 15, T__15 = 16, T__16 = 17, INTEGER = 18, WS = 19, FILTER_WORD = 20
   };
 
   RepoQueryLexer(antlr4::CharStream *input);
