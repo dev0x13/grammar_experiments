@@ -2,6 +2,7 @@ THIS IS A LEGACY FOLDER, THIS LIBRARY IS NO LONGER RELEVANT.
 
 Directory structure:
 
+```
 repo_key_parsers
 ├── include - ANTLR4 generated parser headers (no symbols export options so far)
 ├── prebuilt
@@ -11,6 +12,7 @@ repo_key_parsers
 │   │       ├── x64-gcc5.4 - 64-bit binaries
 │   │       └── x86-gcc5.4 - 32-bit binaries
 └── src - ANTLR4 generated parser sources
+```
 
 CMake options:
 
